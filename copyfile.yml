@@ -1,0 +1,9 @@
+- name: copy files
+  hosts: all
+  tasks:
+          - name: copy to temp
+            copy:
+                    src: /home/ansible/tower/inventory
+                    dest: /home/ansible/Desktop
+
+
