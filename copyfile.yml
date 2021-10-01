@@ -1,9 +1,8 @@
-- name: copy files
+- name: Copy Files over SSH
   hosts: all
   tasks:
-          - name: copy to temp
+          - name: start copy
             copy:
                     src: /home/ansible/tower/inventory
-                    dest: /home/ansible/Desktop
-
+                    dest: /home/ansible/
 
