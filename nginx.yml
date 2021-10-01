@@ -1,0 +1,10 @@
+- name: start web server
+  hosts: all
+  tasks:
+          - name: start nginx
+            service: 
+              name: nginx
+              state: started
+            become: true
+            become_method: sudo
+

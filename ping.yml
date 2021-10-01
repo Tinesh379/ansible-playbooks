@@ -1,0 +1,8 @@
+- name: Test Connectivity
+  hosts: all
+  tasks:
+      - name: ping test
+        ping:
+      - name: uptime
+        command: echo "Hello World"
+
