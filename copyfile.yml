@@ -3,6 +3,6 @@
   tasks:
           - name: start copy
             copy:
-                    src: /home/ansible/ansible-ower/inventory
-                    dest: /home/ansible/
+                    src: /home/ansible/ansible-tower/inventory
+                    dest: /home/ansible/Desktop
 
