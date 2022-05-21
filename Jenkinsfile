@@ -8,6 +8,7 @@ pipeline{
     }
     environment{
         ANSIBLE=credentials('ansible')
+        PLAYBOOK = "${params.PLAYBOOK_NAME}"
     }
     parameters {
     booleanParam description: 'Enable to run the playbooks', name: 'RUN_PLAYBOOKS'
@@ -25,7 +26,8 @@ pipeline{
             }
             steps{
                 sh '''
-                ansible-playbook ${params.PLAYBOOK_NAME} -i hosts --extra-vars "ansible_user=$ANSIBLE_USR ansible_shh_pass=$ANSIBLE_PSW" -vv
+                ls -alt
+                ansible-playbook $PLAYBOOK -i hosts --extra-vars "ansible_user=$ANSIBLE_USR ansible_shh_pass=$ANSIBLE_PSW" -vv
                 '''
             }
         }
