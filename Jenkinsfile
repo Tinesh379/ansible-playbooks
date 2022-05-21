@@ -27,7 +27,7 @@ pipeline{
             steps{
                 sh '''
                 ls -alt
-                ansible-playbook $PLAYBOOK -i hosts --extra-vars "ansible_user=$ANSIBLE_USR ansible_shh_pass=$ANSIBLE_PSW" -vv
+                ansible-playbook $PLAYBOOK -i inventory --extra-vars "ansible_user=$ANSIBLE_USR ansible_shh_pass=$ANSIBLE_PSW" -vv
                 '''
             }
         }
