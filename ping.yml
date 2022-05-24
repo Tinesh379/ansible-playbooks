@@ -1,5 +1,5 @@
 - name: Test Connectivity
-  hosts: all
+  hosts:  "{{ GROUP}}"
   tasks:
       - name: ping test
         ping:
